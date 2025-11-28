@@ -2,7 +2,7 @@
 import { gsap } from "gsap";
 const BottomAbout = () => {
   return (
-    <div className="min-h-screen w-full flex items-center justify-center text-white py-20 px-6">
+    <div className="md:min-h-screen h-full w-full flex items-center justify-center text-white py-20 md:px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-20">
         <div className="w-full md:w-1/2 space-y-8">
           <h2 className="text-sm md:text-base font-bold text-gray-400 uppercase tracking-widest mb-4">

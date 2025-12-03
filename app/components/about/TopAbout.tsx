@@ -11,14 +11,21 @@ const TopAbout = () => {
           duration: 0.5,
         })
       }
-      className="h-screen max-w-7xl mx-auto w-full text-white flex-col flex justify-center"
+      className="h-[52vh] md:h-screen  max-w-7xl mx-auto w-full text-white flex-col flex justify-center"
     >
-      <div className="max-w-7xl mx-auto flex flex-col items-center justify-center
-      gap-8">
-        <h2 className=" capitalize  text-gray-400 font-bold  text-lg  ">about me</h2>
-        <h1 className="text-4xl font-mono">I{`'`}am a  <span className="text-blue-500">programmer</span>  skilled at creating</h1>
+      <div
+        className="max-w-7xl mx-auto text-center flex flex-col items-center justify-center pt-72 sm:pt-60 md:pt-18 
+      gap-8"
+      >
+        <h2 className=" capitalize  text-gray-400 font-bold  text-lg  ">
+          about me
+        </h2>
+        <h1 className="text-4xl font-mono">
+          I{`'`}am a <span className="text-blue-500">programmer</span> skilled
+          at creating
+        </h1>
       </div>
-      <div className="mt-10">
+      <div className="mt-20 ">
         <div
           onMouseEnter={() =>
             gsap.to(".cursor", {

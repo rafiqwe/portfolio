@@ -63,9 +63,9 @@ const Navber = () => {
         <ul
           className="
             uppercase flex items-center justify-center
-            gap-6 sm:gap-10 md:gap-12
+            gap-3 sm:gap-7 md:gap-12
             text-gray-400 font-bold tracking-wider
-            text-xs sm:text-sm md:text-base
+            text-xs sm:text-base md:text-base
             font-corporatus
           "
         >

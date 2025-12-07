@@ -52,9 +52,9 @@ const ProjectsCard = () => {
 
   return (
     <>
-      <div className="w-full px-20 bg-black pb-10 " ref={containerRef}>
+      <div className="w-full md:px-0 px-10 bg-black pb-10 " ref={containerRef}>
         {Array.from({ length: 5 }).map((_, index) => (
-          <div key={index} className="sticky-wrapper h-screen sticky top-0">
+          <div key={index} className="sticky-wrapper w-full h-screen sticky top-0">
             {/* ★ PRO PROJECT CARD ★ */}
             <div className="project-card h-screen w-full  p-10 bg-neutral-900 border border-neutral-800 shadow-[0_0_50px_rgba(0,0,0,0.5)] relative overflow-hidden flex flex-col justify-center gap-8">
               {/* Background big number */}

@@ -31,7 +31,7 @@ const Cursor = () => {
     return (
         <div 
             ref={cursorRef} 
-            className="cursor hidden md:block fixed top-0 left-0 w-5 h-5 bg-gray-400 rounded-full pointer-events-none z-[9999] mix-blend-difference"
+            className="cursor hidden md:block font-bold font-mono text-center py-[6px] fixed top-0 left-0 w-5 h-5 bg-gray-400 rounded-full pointer-events-none z-[9999] mix-blend-difference"
         />
     );
 }

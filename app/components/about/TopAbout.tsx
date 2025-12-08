@@ -1,8 +1,19 @@
 "use client";
 import gsap from "gsap";
 import TextPressure from "./TextPressure";
+import { useEffect, useState } from "react";
 
 const TopAbout = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mobileCheck =
+      window.innerWidth < 768 ||
+      "ontouchstart" in window ||
+      navigator.maxTouchPoints > 0;
+
+    setIsMobile(mobileCheck);
+  }, []);
+
   return (
     <div
       onMouseEnter={() =>
@@ -46,7 +57,7 @@ const TopAbout = () => {
           <TextPressure
             text="Experiences"
             flex={true}
-            alpha={true}
+            alpha={!isMobile}
             stroke={false}
             width={true}
             weight={true}

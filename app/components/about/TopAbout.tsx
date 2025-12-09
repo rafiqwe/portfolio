@@ -2,6 +2,7 @@
 import gsap from "gsap";
 import TextPressure from "./TextPressure";
 import { useEffect, useState } from "react";
+import { Element } from "react-scroll";
 
 const TopAbout = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -15,60 +16,62 @@ const TopAbout = () => {
   }, []);
 
   return (
-    <div
-      onMouseEnter={() =>
-        gsap.to(".cursor", {
-          background: "white",
-          duration: 0.5,
-        })
-      }
-      className="h-[52vh] md:h-screen  max-w-7xl mx-auto w-full text-white flex-col flex justify-center"
-    >
+    <Element name="service">
       <div
-        className="max-w-7xl mx-auto text-center flex flex-col items-center justify-center pt-72 sm:pt-60 md:pt-18 
-      gap-8"
+        onMouseEnter={() =>
+          gsap.to(".cursor", {
+            background: "white",
+            duration: 0.5,
+          })
+        }
+        className="h-[52vh] md:h-screen  max-w-7xl mx-auto w-full text-white flex-col flex justify-center"
       >
-        <h2 className=" capitalize  text-gray-400 font-bold  text-lg  ">
-          about me
-        </h2>
-        <h1 className="text-4xl font-mono">
-          I{`'`}am a <span className="text-blue-500">programmer</span> skilled
-          at creating
-        </h1>
-      </div>
-      <div className="mt-20 ">
         <div
-          onMouseEnter={() =>
-            gsap.to(".cursor", {
-              scale: 9,
-              duration: 0.6,
-              ease: "power1.out",
-            })
-          }
-          onMouseLeave={() =>
-            gsap.to(".cursor", {
-              scale: 1,
-              duration: 0.6,
-              ease: "power1.out",
-            })
-          }
-          style={{ position: "relative", height: "270px" }}
+          className="max-w-7xl mx-auto text-center flex flex-col items-center justify-center pt-72 sm:pt-60 md:pt-18 
+      gap-8"
         >
-          <TextPressure
-            text="Experiences"
-            flex={true}
-            alpha={!isMobile}
-            stroke={false}
-            width={true}
-            weight={true}
-            italic={true}
-            textColor="#ffffff"
-            strokeColor="#ff0000"
-            minFontSize={80}
-          />
+          <h2 className=" capitalize  text-gray-400 font-bold  text-lg  ">
+            about me
+          </h2>
+          <h1 className="text-4xl font-mono">
+            I{`'`}am a <span className="text-blue-500">programmer</span> skilled
+            at creating
+          </h1>
+        </div>
+        <div className="mt-20 ">
+          <div
+            onMouseEnter={() =>
+              gsap.to(".cursor", {
+                scale: 9,
+                duration: 0.6,
+                ease: "power1.out",
+              })
+            }
+            onMouseLeave={() =>
+              gsap.to(".cursor", {
+                scale: 1,
+                duration: 0.6,
+                ease: "power1.out",
+              })
+            }
+            style={{ position: "relative", height: "270px" }}
+          >
+            <TextPressure
+              text="Experiences"
+              flex={true}
+              alpha={!isMobile}
+              stroke={false}
+              width={true}
+              weight={true}
+              italic={true}
+              textColor="#ffffff"
+              strokeColor="#ff0000"
+              minFontSize={80}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </Element>
   );
 };
 

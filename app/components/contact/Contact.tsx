@@ -48,8 +48,6 @@ const Contact = () => {
 
     mm.add("(max-width: 767px)", () => {
       // MOBILE
-      gsap.killTweensOf("*");
-      ScrollTrigger.getAll().forEach((t) => t.kill());
     });
   });
 
@@ -62,7 +60,9 @@ const Contact = () => {
       <div ref={mainRef} className="w-full md:w-1/2">
         {/* SECTION 1 — SOCIAL MEDIA */}
         <div
-          ref={(el) => (leftRefs.current[0] = el!)}
+          ref={(el) => {
+            leftRefs.current[0] = el!;
+          }}
           className="min-h-screen flex flex-col items-center justify-center p-8 gap-6"
         >
           <h2 className="text-4xl font-bold mb-4 text-white">
@@ -104,7 +104,9 @@ const Contact = () => {
 
         {/* SECTION 2 — CONTACT FORM */}
         <div
-          ref={(el) => (leftRefs.current[1] = el!)}
+          ref={(el) => {
+            leftRefs.current[1] = el!;
+          }}
           className="min-h-screen flex flex-col items-center justify-center p-8"
         >
           <h2 className="text-4xl font-bold mb-6 text-white">Contact Me</h2>
@@ -145,7 +147,9 @@ const Contact = () => {
       >
         {/* RIGHT 1 */}
         <div
-          ref={(el) => (rightRefs.current[0] = el!)}
+          ref={(el) => {
+            rightRefs.current[0] = el!;
+          }}
           className="absolute md:h-screen w-full  flex items-center justify-center text-3xl font-bold"
         >
           <h1>RED CONTENT</h1>
@@ -153,8 +157,10 @@ const Contact = () => {
 
         {/* RIGHT 2 */}
         <div
-          ref={(el) => (rightRefs.current[1] = el!)}
-          className="absolute md:h-screen w-full bg-green-500 flex items-center justify-center text-3xl font-bold"
+          ref={(el) => {
+            rightRefs.current[1] = el!;
+          }}
+          className="absolute md:h-screen w-full flex items-center justify-center text-3xl font-bold"
         >
           <h1>GREEN CONTENT</h1>
         </div>
@@ -164,4 +170,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

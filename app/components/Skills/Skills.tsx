@@ -1,6 +1,7 @@
 "use client";
 import gsap from "gsap";
-import React, { useRef } from "react";
+import { useRef } from "react";
+import { Element } from "react-scroll";
 
 const Skills = () => {
   const bgRef = useRef<HTMLDivElement[]>([]);
@@ -101,50 +102,58 @@ const Skills = () => {
   };
 
   return (
-    <div className="w-full ">
-      {skills.map((skill, index) => (
-        <div
-          key={index}
-          onMouseEnter={() => handleMouseEnter(index)}
-          onMouseLeave={() => handleMouseLeave(index)}
-          className="relative flex items-center justify-center h-13 md:h-23 border-b last:border-b-0 overflow-hidden font-corporatus"
-        >
-          {/* Main text */}
-          <h1
-            ref={(el) => (mainTextRef.current[index] = el!)}
-            className="text-3xl z-10"
-          >
-            {skill}
-          </h1>
-
-          {/* White background */}
+    <Element name="skill">
+      <div className="w-full ">
+        {skills.map((skill, index) => (
           <div
-            ref={(el) => (bgRef.current[index] = el!)}
-            className="absolute top-0 left-0 w-full h-0 bg-white overflow-hidden flex items-center"
-            style={{ zIndex: 5 }}
+            key={index}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={() => handleMouseLeave(index)}
+            className="relative flex items-center justify-center h-13 md:h-23 border-b last:border-b-0 overflow-hidden font-corporatus"
           >
-            {/* Infinite marquee */}
-            <div
-              ref={(el) => (marqueeRef.current[index] = el!)}
-              className="flex whitespace-nowrap gap-10 px-10"
+            {/* Main text */}
+            <h1
+              ref={(el) => {
+                mainTextRef.current[index] = el!;
+              }}
+              className="text-3xl z-10"
             >
-              {[...Array(2)].map((_, copy) => (
-                <div key={copy} className="flex gap-40">
-                  {Array.from({ length: 15 }).map((_, i) => (
-                    <h1
-                      key={i}
-                      className="text-3xl text-gray-900 font-corporatus"
-                    >
-                      {skill}
-                    </h1>
-                  ))}
-                </div>
-              ))}
+              {skill}
+            </h1>
+
+            {/* White background */}
+            <div
+              ref={(el) => {
+                bgRef.current[index] = el!;
+              }}
+              className="absolute top-0 left-0 w-full h-0 bg-white overflow-hidden flex items-center"
+              style={{ zIndex: 5 }}
+            >
+              {/* Infinite marquee */}
+              <div
+                ref={(el) => {
+                  marqueeRef.current[index] = el!;
+                }}
+                className="flex whitespace-nowrap gap-10 px-10"
+              >
+                {[...Array(2)].map((_, copy) => (
+                  <div key={copy} className="flex gap-40">
+                    {Array.from({ length: 15 }).map((_, i) => (
+                      <h1
+                        key={i}
+                        className="text-3xl text-gray-900 font-corporatus"
+                      >
+                        {skill}
+                      </h1>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      ))}
-    </div>
+        ))}
+      </div>
+    </Element>
   );
 };
 

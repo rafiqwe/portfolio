@@ -12,8 +12,8 @@ const SocialLink = ({
 }) => {
   const imageRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLLIElement>(null);
-  const xTo = useRef<gsap.QuickToFunc>();
-  const yTo = useRef<gsap.QuickToFunc>();
+  const xTo = useRef<gsap.QuickToFunc | null>(null);
+  const yTo = useRef<gsap.QuickToFunc | null>(null);
 
   const [isMobile, setIsMobile] = useState(false);
 

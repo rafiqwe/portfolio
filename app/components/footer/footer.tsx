@@ -45,7 +45,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-black relative text-white p-5 h-[70vh] md:p-10">
+    <footer className="bg-black relative text-white p-5 h-full md:h-[80vh] md:p-10">
       <div className="absolute top-0 left-0 w-full h-full ">
         <GlowLine orientation="horizontal" position="0" color="blue" />
       </div>

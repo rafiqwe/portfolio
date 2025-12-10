@@ -1,11 +1,32 @@
 "use client";
+import { useGSAP } from "@gsap/react";
 import FloatingTechStack from "./FloatingTechStack";
 import gsap from "gsap";
+import { Element } from 'react-scroll'
+import { useRef } from "react";
 
 const Hero = () => {
+  const mainRef = useRef<HTMLDivElement>(null);
+  useGSAP(() => {
+    gsap.fromTo(mainRef.current, {
+      opacity:0,
+      duration: 1.5,
+      ease: "power1.out",
+      scale: 0,
+    }, {
+      opacity:1,
+      duration: 1,
+      scale: 1,
+      ease: "power1.out",
+      delay:6.5,
+    })
+  })
+
   return (
     <>
+    <Element name="home" className="h-full">
       <div
+        ref={mainRef}
         onMouseEnter={() =>
           gsap.to(".cursor", {
             background: "#9CA3AF",
@@ -75,6 +96,7 @@ const Hero = () => {
 
         <FloatingTechStack />
       </div>
+      </Element>
     </>
   );
 };

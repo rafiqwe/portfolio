@@ -2,6 +2,7 @@
 import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-scroll";
 
 const Navber = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -16,8 +17,30 @@ const Navber = () => {
         ease: "power3.out",
       });
     },
+
     { scope: containerRef }
   );
+
+  useGSAP(() => {
+    gsap.fromTo(
+      containerRef.current,
+      {
+        y: -30,
+        opacity: 0,
+        duration: 1,
+        ease: "power1.out",
+        scale: 0,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        scale: 1,
+        ease: "power1.out",
+        delay: 6.7,
+      }
+    );
+  });
 
   const handleMouseEnter = (e: React.MouseEvent<HTMLLIElement>) => {
     gsap.to(e.currentTarget, {
@@ -76,7 +99,9 @@ const Navber = () => {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              {item}
+              <Link to={item} smooth={true} duration={700} spy={true}>
+                {item}
+              </Link>
             </li>
           ))}
         </ul>

@@ -3,14 +3,17 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import LeftContact from "./LeftContact";
+import RightContact from "./RightContact";
+import { Facebook, Instagram, Linkedin, Github, Mail } from "lucide-react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
-  const RightContent = useRef<HTMLDivElement | null>(null);
+  const RightContent = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement | null>(null);
-
+  const [imageLink, setImageLink] = useState<{ link: string; image: string } | null>(null);
   const leftRefs = useRef<HTMLDivElement[]>([]);
   const rightRefs = useRef<HTMLDivElement[]>([]);
 
@@ -50,6 +53,32 @@ const Contact = () => {
       // MOBILE
     });
   });
+  const socialLink = [
+    {
+      icon: <Facebook size={28} />,
+      link: "https://www.facebook.com/muhammadrabbi.dev",
+      image: "/images/instagram.webp",
+    },
+    {
+      icon: <Instagram size={28} />,
+      link: "https://www.instagram.com/muhammadrabbi.dev/",
+      image: "/images/instagram.webp",
+    },
+    {
+      icon: <Linkedin size={28} />,
+      link: "https://www.linkedin.com/in/muhammad-rabbi-dev",
+      image: "/images/linkedin1.webp",
+    },
+    {
+      icon: <Github size={28} />,
+      link: "https://github.com/rafiqwe",
+      image: "/images/github.webp",
+    },
+  ];
+
+  const handleMouseEnterLinks = (imageLink: { link: string; image: string }) => {
+    setImageLink(imageLink);
+  };
 
   return (
     <div
@@ -57,114 +86,20 @@ const Contact = () => {
       className="flex flex-col md:flex-row overflow-hidden w-full h-full relative justify-between bg-black text-white"
     >
       {/* LEFT SIDE */}
-      <div ref={mainRef} className="w-full md:w-1/2">
-        {/* SECTION 1 — SOCIAL MEDIA */}
-        <div
-          ref={(el) => {
-            leftRefs.current[0] = el!;
-          }}
-          className="min-h-screen flex flex-col items-center justify-center p-8 gap-6"
-        >
-          <h2 className="text-4xl font-bold mb-4 text-white">
-            Connect With Me
-          </h2>
-
-          <p className="max-w-md text-gray-300 text-lg text-center">
-            I’m active on all major platforms. Feel free to reach out or follow
-            me!
-          </p>
-
-          <div className="flex gap-6 mt-6">
-            <a
-              href="#"
-              className="text-white text-3xl hover:text-blue-400 duration-200"
-            >
-              🌐
-            </a>
-            <a
-              href="#"
-              className="text-white text-3xl hover:text-pink-400 duration-200"
-            >
-              📸
-            </a>
-            <a
-              href="#"
-              className="text-white text-3xl hover:text-blue-500 duration-200"
-            >
-              🐦
-            </a>
-            <a
-              href="#"
-              className="text-white text-3xl hover:text-purple-400 duration-200"
-            >
-              🎨
-            </a>
-          </div>
-        </div>
-
-        {/* SECTION 2 — CONTACT FORM */}
-        <div
-          ref={(el) => {
-            leftRefs.current[1] = el!;
-          }}
-          className="min-h-screen flex flex-col items-center justify-center p-8"
-        >
-          <h2 className="text-4xl font-bold mb-6 text-white">Contact Me</h2>
-
-          <form className="w-full max-w-md flex flex-col gap-5">
-            <input
-              type="text"
-              placeholder="Your Name"
-              className="p-3 rounded-lg bg-white/10 text-white border border-white/20 outline-none"
-            />
-
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="p-3 rounded-lg bg-white/10 text-white border border-white/20 outline-none"
-            />
-
-            <textarea
-              placeholder="Your Message"
-              rows={5}
-              className="p-3 rounded-lg bg-white/10 text-white border border-white/20 outline-none"
-            />
-
-            <button
-              type="submit"
-              className="p-3 bg-white text-black rounded-lg font-semibold hover:bg-gray-200 duration-200"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-      </div>
+      <LeftContact
+        mainRef={mainRef}
+        leftRefs={leftRefs}
+        socialLink={socialLink}
+        handleMouseEnterLinks={handleMouseEnterLinks}
+        setImageLink={setImageLink}
+      />
 
       {/* RIGHT SIDE */}
-      <div
-        ref={RightContent}
-        className="w-full md:w-1/2 flex items-center justify-center h-screen md:sticky md:top-0 relative"
-      >
-        {/* RIGHT 1 */}
-        <div
-          ref={(el) => {
-            rightRefs.current[0] = el!;
-          }}
-          className="absolute md:h-screen w-full  flex items-center justify-center text-3xl font-bold"
-        >
-          <h1>RED CONTENT</h1>
-        </div>
-
-        {/* RIGHT 2 */}
-        <div
-          ref={(el) => {
-            rightRefs.current[1] = el!;
-          }}
-          className="absolute md:h-screen w-full flex items-center justify-center text-3xl font-bold"
-        >
-          <h1>GREEN CONTENT</h1>
-        </div>
-      </div>
+      <RightContact
+        rightRefs={rightRefs}
+        RightContent={RightContent}
+        imageLink={imageLink}
+      />
     </div>
   );
 };

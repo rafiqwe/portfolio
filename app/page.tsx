@@ -13,7 +13,6 @@ export default function Home() {
       <Skill />
       <Projects />
       <Contact />
-      <div className="h-screen bg-amber-300 "></div>
       <Footer />
     </div>
   );

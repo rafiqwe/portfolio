@@ -13,7 +13,10 @@ gsap.registerPlugin(ScrollTrigger);
 const Contact = () => {
   const RightContent = useRef<HTMLDivElement>(null);
   const mainRef = useRef<HTMLDivElement | null>(null);
-  const [imageLink, setImageLink] = useState<{ link: string; image: string } | null>(null);
+  const [imageLink, setImageLink] = useState<{
+    link: string;
+    image: string;
+  } | null>(null);
   const leftRefs = useRef<HTMLDivElement[]>([]);
   const rightRefs = useRef<HTMLDivElement[]>([]);
 
@@ -57,7 +60,7 @@ const Contact = () => {
     {
       icon: <Facebook size={28} />,
       link: "https://www.facebook.com/muhammadrabbi.dev",
-      image: "/images/instagram.webp",
+      image: "/images/facebook.png",
     },
     {
       icon: <Instagram size={28} />,
@@ -76,7 +79,10 @@ const Contact = () => {
     },
   ];
 
-  const handleMouseEnterLinks = (imageLink: { link: string; image: string }) => {
+  const handleMouseEnterLinks = (imageLink: {
+    link: string;
+    image: string;
+  }) => {
     setImageLink(imageLink);
   };
 

@@ -49,24 +49,24 @@ const Footer = () => {
       <div className="absolute top-0 left-0 w-full h-full ">
         <GlowLine orientation="horizontal" position="0" color="blue" />
       </div>
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-7xl mx-auto text-center md:text-left">
         <div className="flex flex-col md:flex-row pt-20 max-w-5xl gap-10 justify-between">
-          <div className="w-full">
+          <div className="w-full ">
             <div className="border-b-3 border-white/20 pb-2">
               <h1 className="font-corporatus text-2xl ">Menu</h1>
             </div>
-            <ul className="flex flex-col gap-6 mt-5 font-corporatus text-lg">
+            <ul className="flex flex-col gap-6 mt-5 w-full md:items-start items-center font-corporatus text-center text-lg">
               {menu.map((item) => (
                 <FooterMenu key={item.name} item={item} />
               ))}
             </ul>
           </div>
-          <div className="w-1/2">
+          <div className="md:w-1/2 w-full md:p-0 text-center md:text-left pb-10">
             <div>
               <div className="border-b-3 border-white/20 pb-2">
                 <h1 className="font-corporatus text-2xl ">Social Media</h1>
               </div>
-              <ul className="flex flex-col gap-6 mt-5 font-mono text-lg">
+              <ul className="flex flex-col gap-6 mt-5 md:items-start items-center font-mono text-lg">
                 {socialMedia.map((item) => (
                   <SocialLink key={item.name} item={item} />
                 ))}

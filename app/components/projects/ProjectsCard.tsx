@@ -1,14 +1,11 @@
 "use client";
-
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 import ProjectsVideo from "./ProjectsVideo";
 import { Element } from "react-scroll";
-
 gsap.registerPlugin(ScrollTrigger);
-
 const ProjectsCard = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRefs = useRef<HTMLVideoElement[]>([]);

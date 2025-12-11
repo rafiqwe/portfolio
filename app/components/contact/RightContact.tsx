@@ -49,7 +49,13 @@ const RightContact = ({
             </p>
           </div>
 
-          <div className="w-full h-40 bg-gradient-to-br from-purple-500/40 to-blue-500/40 rounded-xl shadow-inner flex items-center justify-center">
+          <div
+            className={`w-full h-40  ${
+              imageLink
+                ? ""
+                : "from-purple-500/40 bg-gradient-to-br to-blue-500/40"
+            }  rounded-xl  flex items-center justify-center`}
+          >
             <span className="text-white text-xl opacity-80">
               {imageLink ? (
                 <Link href={imageLink.link} target="_blank">

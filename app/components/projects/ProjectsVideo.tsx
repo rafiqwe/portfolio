@@ -16,7 +16,7 @@ const ProjectsVideo = ({
       }}
       src={project.video}
       muted
-      className="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-500"
+      className="absolute inset-0 w-full h-full object-cover opacity-0 transition duration-500 md:w-full"
     />
   );
 };

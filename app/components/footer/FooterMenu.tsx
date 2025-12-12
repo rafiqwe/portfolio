@@ -1,8 +1,8 @@
 "use client";
 import gsap from "gsap";
-import Link from "next/link";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
+import { Link } from "react-scroll";
 
 const FooterMenu = ({ item }: { item: { name: string; url: string } }) => {
   const menuRef = useRef<HTMLLIElement | null>(null);
@@ -51,7 +51,9 @@ const FooterMenu = ({ item }: { item: { name: string; url: string } }) => {
       className="cursor-pointer w-fit"
     >
       <Link
-        href={item.url}
+        to={item.url}
+        smooth={true}
+        duration={500}
         className="text-white text-lg font-light tracking-wide"
       >
         {item.name}

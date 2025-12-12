@@ -70,54 +70,137 @@ const ProjectsCard = () => {
 
   const projects = [
     {
-      name: "Project 1",
-      title: "Project Title",
-      description: "Project Description",
-      skills: ["Next.js", "TypeScript", "Tailwind", "GSAP"],
+      name: "BGIFT",
+      title: "AI-Enhanced Social Media Platform",
+      description:
+        "BGIFT is a next-gen social media platform built with real-time features, intelligent content delivery, advanced privacy controls, and a clean, modern UI. It includes real-time chat, posts, comments, friend requests, notifications, an optimized feed system, smooth GSAP animations, Cloudinary media upload, and a fully responsive design.",
+      skills: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Prisma",
+        "PostgreSQL",
+        "NextAuth",
+        "Socket.IO",
+        "Cloudinary",
+        "GSAP",
+        "Framer Motion",
+      ],
       image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=40",
-      github: "#",
-      url: "#",
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552340/bgift_d6myue.webp",
+      github: "https://github.com//BGIFT",
+      url: "https://bgift.vercel.app",
+      video:
+        "https://res.cloudinary.com/dlfjsnbs1/video/upload/v1765214128/applemacbook_ox8hva.mp4",
+    },
+
+    {
+      name: "genai-component-builder",
+      title: "GenAi – AI Component Generator",
+      description:
+        "A full-stack SaaS platform that generates production-ready UI components using AI. Supports real-time preview, code export, custom prompts, and role-based authentication. Built for developers who want to build faster.",
+      skills: [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "JWT Auth",
+      ],
+      image:
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552333/genai_2_liwnfn.webp",
+      github: "https://github.com/YourUsername/genai",
+      url: "https://your-genai-app.vercel.app",
       video:
         "https://res.cloudinary.com/dlfjsnbs1/video/upload/v1765214128/applemacbook_ox8hva.mp4",
     },
     {
-      name: "Project 1",
-      title: "Project Title",
-      description: "Project Description",
-      skills: ["Next.js", "TypeScript", "Tailwind", "GSAP"],
+      name: "My Portfolio",
+      title: "Interactive Developer Portfolio",
+      description:
+        "A fully interactive and animation-driven portfolio built with a VS Code–inspired UI, smooth GSAP scroll-based animations, sticky project sections, and a modern minimal dark aesthetic. Includes project videos, dynamic previews, an interactive contact page, and optimized responsive design.",
+      features: [
+        "VS Code–style UI & navigation",
+        "Sticky scroll-driven project showcase",
+        "GSAP animations (scroll, hover, transitions)",
+        "Interactive contact page with pinning effects",
+        "Dynamic project video previews on hover",
+        "Fully responsive layout",
+        "SEO optimized with metadata",
+        "Reusable custom components",
+      ],
+      skills: [
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "GSAP",
+        "Framer Motion",
+        "Cloudinary",
+        "Responsive Design",
+        "UI/UX",
+      ],
       image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=40",
-      github: "#",
-      url: "#",
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552339/portfolio_s9kyfr.webp",
+      github: "https://github.com/yourusername/portfolio",
+      url: "https://yourportfolio.com",
       video:
         "https://res.cloudinary.com/dlfjsnbs1/video/upload/v1765214128/applemacbook_ox8hva.mp4",
     },
     {
-      name: "Project 1",
-      title: "Project Title",
-      description: "Project Description",
-      skills: ["Next.js", "TypeScript", "Tailwind", "GSAP"],
+      name: "devguide",
+      title: "Developer Learning Guide Platform",
+      description:
+        "An interactive platform designed to help developers learn faster through structured roadmaps, curated resources, and step-by-step learning paths. Features include topic-based filtering, clean UI components, and a fully responsive design optimized for modern frontend workflows.",
+      skills: [
+        "React",
+        "Node.js",
+        "Tailwind",
+        "MongoDB",
+        "Express",
+        "Motion",
+        "Context API",
+      ],
       image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=40",
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552336/devguidep_nauhlh.webp",
       github: "#",
       url: "#",
       video:
-        "https://res.cloudinary.com/dlfjsnbs1/video/upload/v1765214128/applemacbook_ox8hva.mp4",
-    },
-    {
-      name: "Project 1",
-      title: "Project Title",
-      description: "Project Description",
-      skills: ["Next.js", "TypeScript", "Tailwind", "GSAP"],
-      image:
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=40",
-      github: "#",
-      url: "#",
-      video:
-        "https://res.cloudinary.com/dlfjsnbs1/video/upload/v1765214128/applemacbook_ox8hva.mp4",
+        "https://res.cloudinary.com/dlfjsnbs1/video/upload/v1734215556/devguide-demo_kxhwjd.mp4",
     },
   ];
+
+  const techStyles: Record<string, string> = {
+    "Next.js":
+      "bg-black text-white border-white/20 hover:bg-white hover:text-black hover:border-white",
+    TypeScript:
+      "bg-blue-600/30 text-blue-300 border-blue-500/30 hover:bg-blue-600 hover:text-white",
+    Tailwind:
+      "bg-cyan-600/20 text-cyan-300 border-cyan-500/30 hover:bg-cyan-500 hover:text-black",
+    GSAP: "bg-green-600/20 text-green-300 border-green-500/30 hover:bg-green-500 hover:text-black",
+    React:
+      "bg-sky-500/20 text-sky-300 border-sky-400/30 hover:bg-sky-400 hover:text-black",
+    "Node.js":
+      "bg-green-700/20 text-green-400 border-green-700/30 hover:bg-green-700 hover:text-white",
+    MongoDB:
+      "bg-emerald-600/20 text-emerald-300 border-emerald-500/30 hover:bg-emerald-500 hover:text-black",
+    Express:
+      "bg-gray-700/40 text-gray-200 border-gray-600/40 hover:bg-gray-500 hover:text-white",
+    Prisma:
+      "bg-indigo-700/20 text-indigo-300 border-indigo-500/30 hover:bg-indigo-500 hover:text-white",
+    "Framer Motion":
+      "bg-purple-700/20 text-purple-300 border-purple-500/30 hover:bg-purple-500 hover:text-white",
+    Redux:
+      "bg-purple-600/20 text-purple-300 border-purple-400 hover:bg-purple-600 hover:text-white",
+    Firebase:
+      "bg-orange-600/20 text-orange-300 border-orange-500/30 hover:bg-orange-500 hover:text-black",
+    PostgreSQL:
+      "bg-sky-700/20 text-sky-300 border-sky-600/30 hover:bg-sky-600 hover:text-white",
+    Shadcn:
+      "bg-zinc-700/20 text-zinc-300 border-zinc-600/40 hover:bg-zinc-400 hover:text-black",
+  };
 
   return (
     <Element name="project">
@@ -128,8 +211,10 @@ const ProjectsCard = () => {
             className="sticky-wrapper w-full h-screen sticky top-0"
           >
             <div
-              className="project-card h-screen w-full p-5 md:p-10 bg-neutral-900 border border-neutral-800
-              shadow-[0_0_50px_rgba(0,0,0,0.5)] relative overflow-hidden flex flex-col justify-center gap-8"
+              className={`project-card rounded-2xl h-screen w-full p-5 md:p-10 bg-neutral-900 border border-neutral-800
+              shadow-[0_0_50px_rgba(0,0,0,0.5)] relative overflow-hidden flex flex-col justify-center gap-8 ${
+                index === projects.length - 1 ? "rounded-none" : ""
+              }`}
               onMouseEnter={() => handleHoverStart(index)}
               onMouseLeave={() => handleHoverEnd(index)}
             >
@@ -172,8 +257,14 @@ const ProjectsCard = () => {
                     {project.skills.map((tech) => (
                       <span
                         key={tech}
-                        className="px-3 py-1 rounded-full border border-neutral-700 bg-neutral-800/40 
-                        text-neutral-300 text-sm"
+                        className={`
+        px-3 py-1 rounded-full text-sm font-medium border transition-all duration-300
+        hover:scale-110 hover:shadow-[0_0_15px_rgba(255,255,255,0.3)]
+        ${
+          techStyles[tech] ||
+          "bg-neutral-800/40 text-neutral-300 border-neutral-700"
+        }
+      `}
                       >
                         {tech}
                       </span>

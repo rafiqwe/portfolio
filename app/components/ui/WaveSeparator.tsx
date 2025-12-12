@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const WaveSeparator = () => {
-  const waveRefs = useRef([]);
+  const waveRefs = useRef<(SVGPathElement | null)[]>([]);
 
   // SAME STYLE AS YOUR ORIGINAL — just stronger amplitude & dynamic
   const makeWave = (offset = 0, amp = 40) => {
@@ -52,7 +52,9 @@ const WaveSeparator = () => {
         return (
           <path
             key={i}
-            ref={(el) => (waveRefs.current[i] = el)}
+            ref={(el) => {
+              waveRefs.current[i] = el;
+            }}
             d={pair.a}
             fill="black"
             opacity={1}

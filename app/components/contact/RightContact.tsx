@@ -71,7 +71,7 @@ const RightContact = ({
                   </div>
                 </Link>
               ) : (
-                "No Image Selected"
+                "Hover on a social icon to see preview"
               )}
             </span>
           </div>
@@ -124,7 +124,7 @@ const RightContact = ({
             {/* BUTTON */}
             <button
               type="submit"
-              className="mt-4 w-full py-3 rounded-xl bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold shadow-lg hover:scale-105 transition-all duration-300"
+              className="mt-4 w-full py-3 rounded-xl bg-gradient-to-r from-purple-500 to-blue-500 text-white font-semibold shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
             >
               Send Message
             </button>

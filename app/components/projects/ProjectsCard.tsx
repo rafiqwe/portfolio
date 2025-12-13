@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 import ProjectsVideo from "./ProjectsVideo";
 import { Element } from "react-scroll";
+import Image from "next/image";
 gsap.registerPlugin(ScrollTrigger);
 const ProjectsCard = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -230,10 +231,12 @@ const ProjectsCard = () => {
                 {/* MEDIA */}
                 <div className="w-full md:w-[55%] relative rounded-2xl overflow-hidden shadow-2xl border border-neutral-800">
                   <div className="w-full h-[260px] sm:h-[320px] md:h-[430px] lg:h-[520px] relative">
-                    <img
+                    <Image
                       src={project.image}
                       className="w-full h-full object-cover"
                       alt="project preview"
+                      fill
+                      sizes="300px"
                     />
                     <ProjectsVideo
                       videoRefs={videoRefs}

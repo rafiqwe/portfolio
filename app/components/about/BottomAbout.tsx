@@ -10,14 +10,14 @@ const BottomAbout = () => {
             <h2 className="text-sm md:text-base font-bold text-gray-400 uppercase tracking-widest mb-4">
               Who I Am
             </h2>
-            <p className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-tight">
               I’m a{" "}
               <span className="text-blue-500 font-corporatus ">
                 Full-Stack Developer
               </span>{" "}
               who loves creating digital experiences that are both visually
               engaging and technically strong.
-            </p>
+            </h1>
             <p className="text-sm  md:text-base text-gray-400 leading-relaxed font-corporatus">
               I work across the entire stack — building modern interfaces,
               writing scalable backend systems, and ensuring everything runs

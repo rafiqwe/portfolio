@@ -7,7 +7,7 @@ const Footer = () => {
     {
       name: "Linkedin",
       url: "https://www.linkedin.com/in/muhammad-rabbi-dev",
-      image: "/images/linkedin1.webp",
+      image: "/images/linkedIn1.webp",
     },
     {
       name: "Instagram",

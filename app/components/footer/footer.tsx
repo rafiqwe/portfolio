@@ -36,7 +36,7 @@ const Footer = () => {
     },
     {
       name: "Projects",
-      url: "projects",
+      url: "project",
     },
     {
       name: "Contact",

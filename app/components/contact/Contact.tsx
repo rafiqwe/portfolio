@@ -7,6 +7,7 @@ import { useRef, useState } from "react";
 import LeftContact from "./LeftContact";
 import RightContact from "./RightContact";
 import { Facebook, Instagram, Linkedin, Github, Mail } from "lucide-react";
+import { Element } from "react-scroll";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -87,26 +88,28 @@ const Contact = () => {
   };
 
   return (
-    <div
-      ref={mainRef}
-      className="flex flex-col md:flex-row overflow-hidden w-full h-full relative justify-between bg-black text-white"
-    >
-      {/* LEFT SIDE */}
-      <LeftContact
-        mainRef={mainRef}
-        leftRefs={leftRefs}
-        socialLink={socialLink}
-        handleMouseEnterLinks={handleMouseEnterLinks}
-        setImageLink={setImageLink}
-      />
+    <Element name="contact">
+      <div
+        ref={mainRef}
+        className="flex flex-col md:flex-row overflow-hidden w-full h-full relative justify-between bg-black text-white"
+      >
+        {/* LEFT SIDE */}
+        <LeftContact
+          mainRef={mainRef}
+          leftRefs={leftRefs}
+          socialLink={socialLink}
+          handleMouseEnterLinks={handleMouseEnterLinks}
+          setImageLink={setImageLink}
+        />
 
-      {/* RIGHT SIDE */}
-      <RightContact
-        rightRefs={rightRefs}
-        RightContent={RightContent}
-        imageLink={imageLink}
-      />
-    </div>
+        {/* RIGHT SIDE */}
+        <RightContact
+          rightRefs={rightRefs}
+          RightContent={RightContent}
+          imageLink={imageLink}
+        />
+      </div>
+    </Element>
   );
 };
 

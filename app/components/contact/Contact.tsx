@@ -70,7 +70,7 @@ const Contact = () => {
     {
       icon: <Linkedin size={28} />,
       link: "https://www.linkedin.com/in/muhammad-rabbi-dev",
-      image: "/images/linkedin1.webp",
+      image: "/images/linkedIn1.webp",
     },
     {
       icon: <Github size={28} />,

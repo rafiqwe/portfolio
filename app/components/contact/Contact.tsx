@@ -112,5 +112,5 @@ const Contact = () => {
     </Element>
   );
 };
-
+ 
 export default Contact;

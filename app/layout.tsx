@@ -7,6 +7,7 @@ import SmoothScrolling from "./components/SmoothScrolling";
 import localFont from "next/font/local";
 import Cursor from "./components/ui/Cursor";
 import Script from "next/script";
+import WhatsAppFloat from "./components/ui/WhatsAppFloat";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -185,6 +186,7 @@ export default function RootLayout({
             <Navber />
             {children}
           </div>
+          <WhatsAppFloat />
         </SplashWrapper>
       </body>
     </html>

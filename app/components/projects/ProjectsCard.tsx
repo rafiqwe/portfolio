@@ -209,7 +209,7 @@ const ProjectsCard = () => {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="sticky-wrapper w-full h-screen sticky top-0"
+            className="sticky-wrapper w-full h-full md:h-screen sticky top-0"
           >
             <div
               className={`project-card rounded-2xl h-screen w-full p-5 md:p-10 bg-neutral-900 border border-neutral-800
@@ -252,7 +252,7 @@ const ProjectsCard = () => {
                     {project.title}
                   </h2>
 
-                  <p className="text-neutral-400 text-base sm:text-lg leading-relaxed max-w-xl">
+                  <p className="text-neutral-400 text-base sm:text-lg leading-relaxed max-w-xl line-clamp-3 md:line-clamp-none">
                     {project.description}
                   </p>
 

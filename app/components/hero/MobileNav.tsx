@@ -5,8 +5,8 @@ import { XIcon } from "lucide-react";
 import { Link } from "react-scroll";
 
 type MobileNavProps = {
-  navMoblieRef: RefObject<HTMLDivElement>;
-  mobileItemsRef: RefObject<HTMLAnchorElement[]>;
+  navMoblieRef: RefObject<HTMLDivElement | null>;
+  mobileItemsRef: RefObject<HTMLDivElement[]>;
   closeMenu: () => void;
 };
 
@@ -50,32 +50,35 @@ const MoblieNav = ({
       {/* Nav Items */}
       <div className="h-full flex flex-col items-center justify-center gap-8">
         {links.map((item, i) => (
-          <Link
+          <div
             key={item.to}
-            to={item.to}
-            smooth
-            duration={700}
-            spy
             ref={(el) => {
               if (el && mobileItemsRef.current) {
                 mobileItemsRef.current[i] = el;
               }
             }}
-            onClick={closeMenu}
-            className="
-              text-3xl md:text-4xl
-              font-corporatus
-              capitalize
-              tracking-wide
-              text-white/80
-              cursor-pointer
-              transition-all duration-300
-              hover:text-white hover:tracking-widest
-              focus:outline-none focus:text-white
-            "
           >
-            {item.label}
-          </Link>
+            <Link
+              to={item.to}
+              smooth
+              duration={700}
+              spy
+              onClick={closeMenu}
+              className="
+                text-3xl md:text-4xl
+                font-corporatus
+                capitalize
+                tracking-wide
+                text-white/80
+                cursor-pointer
+                transition-all duration-300
+                hover:text-white hover:tracking-widest
+                focus:outline-none focus:text-white
+              "
+            >
+              {item.label}
+            </Link>
+          </div>
         ))}
       </div>
     </nav>

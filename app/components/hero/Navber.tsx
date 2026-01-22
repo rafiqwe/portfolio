@@ -10,7 +10,7 @@ import MoblieNav from "./MobileNav";
 const Navber = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const navMoblieRef = useRef<HTMLDivElement>(null);
-  const mobileItemsRef = useRef<HTMLAnchorElement[]>([]);
+  const mobileItemsRef = useRef<HTMLDivElement[]>([]);
   const tl = useRef<GSAPTimeline | null>(null);
 
   // Desktop nav animation

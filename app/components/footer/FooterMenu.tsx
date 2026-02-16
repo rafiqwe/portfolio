@@ -52,6 +52,8 @@ const FooterMenu = ({ item }: { item: { name: string; url: string } }) => {
     >
       <Link
         to={item.url}
+        spy={true}
+        name={item.name}
         smooth={true}
         duration={500}
         className="text-white text-lg font-light tracking-wide"

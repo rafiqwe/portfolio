@@ -62,21 +62,25 @@ const Contact = () => {
       icon: <Facebook size={28} />,
       link: "https://www.facebook.com/muhammadrabbi.dev",
       image: "/images/facebook.png",
+      name: 'Facebook'
     },
     {
       icon: <Instagram size={28} />,
       link: "https://www.instagram.com/muhammadrabbi.dev/",
       image: "/images/instagram.webp",
+      name:"Instagram"
     },
     {
       icon: <Linkedin size={28} />,
       link: "https://www.linkedin.com/in/muhammad-rabbi-dev",
       image: "/images/linkedIn1.webp",
+      name:"LinkedIn"
     },
     {
       icon: <Github size={28} />,
       link: "https://github.com/rafiqwe",
       image: "/images/github.webp",
+      name:"Github"
     },
   ];
 

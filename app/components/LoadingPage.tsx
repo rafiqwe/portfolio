@@ -22,7 +22,7 @@ export const LoadingPage = ({ onDone }: { onDone: () => void }) => {
     gsap.to(counterObj, {
       value: 100,
       delay: 0.8,
-      duration: 4.4, // ← speed of counter
+      duration: 1.8, 
       ease: "power2.out",
       onUpdate: () => {
         if (counterRef.current) {
@@ -34,20 +34,20 @@ export const LoadingPage = ({ onDone }: { onDone: () => void }) => {
     });
     gsap.to(lineRef.current, {
       width: 0,
-      delay: 0.8,
-      duration: 7.4,
+      delay: 1,
+      duration: 1.8,
       ease: "power2.out",
     });
     timeline.to(bollRef.current, {
       y: "46vh",
       ease: "bounce.out",
-      delay: 2.5,
-      duration: 2.5,
+      delay: 1.4,
+      duration: 1.7,
     });
     timeline.to(bollRef.current, {
-      delay: 0.6,
+      delay: 0.2,
       scale: 90,
-      duration: 1,
+      duration: 1.3,
       ease: "power2.out",
       onComplete: () => {
         onDone();

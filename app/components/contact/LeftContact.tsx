@@ -15,11 +15,13 @@ const LeftContact = ({
     icon: React.ReactNode;
     link: string;
     image: string;
+    name: string
   }[];
   setImageLink: React.Dispatch<
     React.SetStateAction<{
       link: string;
       image: string;
+      
     } | null>
   >;
   handleMouseEnterLinks: (imageLink: { link: string; image: string }) => void;
@@ -53,6 +55,7 @@ const LeftContact = ({
               onMouseLeave={() => setImageLink(null)}
               key={i}
               href={item.link}
+              aria-label={item?.name || "social icon"}
               className="p-4 rounded-2xl backdrop-blur-md bg-white/10 hover:bg-white/20 transition-all duration-300 shadow-lg hover:scale-110 text-white"
             >
               {item.icon}

@@ -35,6 +35,7 @@ export const metadata: Metadata = {
 
   description:
     "Muhammad Rabbi is a full-stack web developer with a strong focus on modern frontend engineering and scalable backend systems. He specializes in Next.js, React, TypeScript, Tailwind CSS, GSAP animations, and real-time applications using Socket.IO.",
+
   keywords: [
     "Muhammad Rabbi",
     "Web Developer",

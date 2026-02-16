@@ -18,7 +18,7 @@ const Hero = () => {
       duration: 1,
       scale: 1,
       ease: "power1.out",
-      delay:6.5,
+      delay:4.3,
     })
   })
 

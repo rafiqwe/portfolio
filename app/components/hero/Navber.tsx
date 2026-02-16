@@ -24,7 +24,7 @@ const Navber = () => {
         ease: "power3.out",
       });
     },
-    { scope: containerRef }
+    { scope: containerRef },
   );
 
   // Navbar entrance
@@ -39,7 +39,7 @@ const Navber = () => {
         duration: 1,
         delay: 0.5,
         ease: "power2.out",
-      }
+      },
     );
   });
 
@@ -51,7 +51,7 @@ const Navber = () => {
       .fromTo(
         navMoblieRef.current,
         { x: "100%" },
-        { x: 0, duration: 0.8, ease: "power2.out" }
+        { x: 0, duration: 0.8, ease: "power2.out" },
       )
       .fromTo(
         mobileItemsRef.current,
@@ -62,7 +62,7 @@ const Navber = () => {
           stagger: 0.1,
           duration: 0.6,
           ease: "power2.out",
-        }
+        },
       );
   });
 
@@ -105,9 +105,62 @@ const Navber = () => {
       {/* Mobile Menu Button */}
       <div
         onClick={handleMoblieMenu}
-        className="md:hidden bg-white/80 border-cyan-200 border backdrop-blur-md rounded-full p-2 cursor-pointer z-50"
+        className="
+    md:hidden
+    group
+    relative
+    rounded-full
+    p-[2px]
+    cursor-pointer
+    z-50
+    transition-all
+    duration-300
+    hover:scale-110
+    active:scale-95
+  "
       >
-        <MenuIcon size={34} />
+        {/* Glow Ring */}
+        <div
+          className="
+    absolute inset-0
+    rounded-full
+    bg-gradient-to-r
+    from-cyan-400
+    via-blue-500
+    to-purple-500
+    blur-md
+    opacity-0
+    group-hover:opacity-70
+    transition
+  "
+        />
+
+        {/* Glass Button */}
+        <div
+          className="
+      relative
+      flex items-center justify-center
+      rounded-full
+      bg-white/70
+      backdrop-blur-xl
+      border border-white/40
+      shadow-lg
+      p-3
+      transition-all
+      duration-300
+      group-hover:bg-white/90
+    "
+        >
+          <MenuIcon
+            size={30}
+            className="
+        text-slate-800
+        transition-transform
+        duration-300
+        group-hover:rotate-90
+      "
+          />
+        </div>
       </div>
 
       {/* Mobile Nav */}

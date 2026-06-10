@@ -17,7 +17,7 @@ import ProjectsCard from "./ProjectsCard";
         "Context API",
       ],
       image:
-        "/images/devguide.webp",
+        "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552336/devguidep_nauhlh.webp",
       github: "https://github.com/rafiqwe/devguide",
       url: "https://devguide-dev.vercel.app",
       video:

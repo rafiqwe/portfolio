@@ -193,6 +193,9 @@ const ProjectsCard = ({ projects }: { projects: projects[] }) => {
                   >
                     View Project →
                   </Link>
+                  <Link href={project.github} target="_blank" rel="noopener noreferrer" className="ml-4 inline-block mt-6 px-5 py-3 bg-neutral-800 text-white rounded-lg font-semibold hover:bg-neutral-700 transition">
+                    View GitHub →
+                  </Link>
                 </div>
               </div>
             </div>

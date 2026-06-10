@@ -2,7 +2,7 @@ import ProjectsCard from "./ProjectsCard";
 
   const projects = [
 
-        {
+    {
       name: "devguide",
       title: "Developer Learning Guide Platform",
       description:
@@ -40,7 +40,7 @@ import ProjectsCard from "./ProjectsCard";
       ],
       image:
         "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552333/genai_2_liwnfn.webp",
-      github: "https://github.com/YourUsername/genai",
+      github: "https://github.com/rafiqwe/component-gen-ai-saas",
       url: "https://genai-dev.vercel.app",
       video:
         "#",
@@ -72,7 +72,7 @@ import ProjectsCard from "./ProjectsCard";
       ],
       image:
         "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552339/portfolio_s9kyfr.webp",
-      github: "https://github.com/yourusername/portfolio",
+      github: "https://github.com/rafiqwe/portfolio",
       url: "https://muhammadrabbi.vercel.app",
       video:
         "#",
@@ -97,7 +97,7 @@ import ProjectsCard from "./ProjectsCard";
       ],
       image:
         "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552340/bgift_d6myue.webp",
-      github: "https://github.com//BGIFT",
+      github: "https://github.com/rafiqwe/bgift-social-media",
       url: "https://bgift-social-media.vercel.app/",
       video:
         "#",

@@ -21,7 +21,7 @@ import ProjectsCard from "./ProjectsCard";
       github: "https://github.com/rafiqwe/devguide",
       url: "https://devguide-dev.vercel.app",
       video:
-        "https://res.cloudinary.com/dlfjsnbs1/video/upload/v1734215556/devguide-demo_kxhwjd.mp4",
+        "#",
     },
     {
       name: "genai-component-builder",
@@ -43,7 +43,7 @@ import ProjectsCard from "./ProjectsCard";
       github: "https://github.com/YourUsername/genai",
       url: "https://genai-dev.vercel.app",
       video:
-        "https://res.cloudinary.com/dlfjsnbs1/video/upload/v1765214128/applemacbook_ox8hva.mp4",
+        "#",
     },
     {
       name: "My Portfolio",
@@ -75,7 +75,7 @@ import ProjectsCard from "./ProjectsCard";
       github: "https://github.com/yourusername/portfolio",
       url: "https://muhammadrabbi.vercel.app",
       video:
-        "https://res.cloudinary.com/dlfjsnbs1/video/upload/v1765214128/applemacbook_ox8hva.mp4",
+        "#",
     },
         {
       name: "BGIFT",
@@ -100,7 +100,7 @@ import ProjectsCard from "./ProjectsCard";
       github: "https://github.com//BGIFT",
       url: "https://bgift-social-media.vercel.app/",
       video:
-        "https://res.cloudinary.com/dlfjsnbs1/video/upload/v1765214128/applemacbook_ox8hva.mp4",
+        "#",
     },
 
   ];

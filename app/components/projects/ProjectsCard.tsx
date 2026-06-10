@@ -148,7 +148,6 @@ const ProjectsCard = ({ projects }: { projects: projects[] }) => {
                       className="w-full h-full object-cover"
                       alt="project preview"
                       fill
-                      sizes="300px"
                     />
                     <ProjectsVideo
                       videoRefs={videoRefs}

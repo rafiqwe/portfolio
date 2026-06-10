@@ -142,7 +142,7 @@ const ProjectsCard = ({ projects }: { projects: projects[] }) => {
               <div className="flex flex-col md:flex-row items-center gap-8 lg:gap-14">
                 {/* MEDIA */}
                 <div className="w-full md:w-[55%] relative rounded-2xl overflow-hidden shadow-2xl border border-neutral-800">
-                  <div className="w-full h-[260px] sm:h-[320px] md:h-[430px] lg:h-[520px] relative">
+                  <div className="w-full h-[260px] sm:h-80 md:h-[430px] lg:h-[520px] relative">
                     <Image
                       src={project.image}
                       className="w-full h-full object-cover"

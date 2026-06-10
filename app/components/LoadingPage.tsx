@@ -17,7 +17,7 @@ export const LoadingPage = ({ onDone }: { onDone: () => void }) => {
 
   // Gsap loading animation for splash screen
   useGSAP(() => {
-    let counterObj = { value: 0 };
+    const counterObj = { value: 0 };
     const timeline = gsap.timeline();
     gsap.to(counterObj, {
       value: 100,

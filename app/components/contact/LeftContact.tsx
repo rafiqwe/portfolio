@@ -15,13 +15,12 @@ const LeftContact = ({
     icon: React.ReactNode;
     link: string;
     image: string;
-    name: string
+    name: string;
   }[];
   setImageLink: React.Dispatch<
     React.SetStateAction<{
       link: string;
       image: string;
-      
     } | null>
   >;
   handleMouseEnterLinks: (imageLink: { link: string; image: string }) => void;
@@ -45,7 +44,7 @@ const LeftContact = ({
         {/* SOCIAL ICONS */}
         <div className="flex gap-6 mt-6">
           {socialLink.map((item, i) => (
-            <a
+            <Link
               onMouseEnter={() =>
                 handleMouseEnterLinks({
                   link: item.link,
@@ -56,10 +55,11 @@ const LeftContact = ({
               key={i}
               href={item.link}
               aria-label={item?.name || "social icon"}
+              target="_blank"
               className="p-4 rounded-2xl backdrop-blur-md bg-white/10 hover:bg-white/20 transition-all duration-300 shadow-lg hover:scale-110 text-white"
             >
               {item.icon}
-            </a>
+            </Link>
           ))}
         </div>
       </div>

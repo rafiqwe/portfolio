@@ -6,7 +6,10 @@ import { useRef } from "react";
 import ProjectsVideo from "./ProjectsVideo";
 import { Element } from "react-scroll";
 import Image from "next/image";
+import Link from "next/link";
+
 gsap.registerPlugin(ScrollTrigger);
+
 const ProjectsCard = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const videoRefs = useRef<HTMLVideoElement[]>([]);
@@ -114,7 +117,7 @@ const ProjectsCard = () => {
       image:
         "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552333/genai_2_liwnfn.webp",
       github: "https://github.com/YourUsername/genai",
-      url: "https://your-genai-app.vercel.app",
+      url: "https://genai-dev.vercel.app",
       video:
         "https://res.cloudinary.com/dlfjsnbs1/video/upload/v1765214128/applemacbook_ox8hva.mp4",
     },
@@ -146,7 +149,7 @@ const ProjectsCard = () => {
       image:
         "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552339/portfolio_s9kyfr.webp",
       github: "https://github.com/yourusername/portfolio",
-      url: "https://yourportfolio.com",
+      url: "https://muhammadrabbi.vercel.app",
       video:
         "https://res.cloudinary.com/dlfjsnbs1/video/upload/v1765214128/applemacbook_ox8hva.mp4",
     },
@@ -166,8 +169,8 @@ const ProjectsCard = () => {
       ],
       image:
         "https://res.cloudinary.com/dlfjsnbs1/image/upload/v1765552336/devguidep_nauhlh.webp",
-      github: "#",
-      url: "#",
+      github: "https://github.com/rafiqwe/devguide",
+      url: "https://devguide-dev.vercel.app",
       video:
         "https://res.cloudinary.com/dlfjsnbs1/video/upload/v1734215556/devguide-demo_kxhwjd.mp4",
     },
@@ -274,12 +277,14 @@ const ProjectsCard = () => {
                     ))}
                   </div>
 
-                  <a
-                    href="#"
+                  <Link
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-block mt-6 px-5 py-3 bg-white text-black rounded-lg font-semibold hover:bg-neutral-200 transition"
                   >
                     View Project →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

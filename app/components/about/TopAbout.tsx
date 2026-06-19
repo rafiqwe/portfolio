@@ -66,7 +66,7 @@ const TopAbout = () => {
               italic={true}
               textColor="#ffffff"
               strokeColor="#ff0000"
-              minFontSize={80}
+              minFontSize={85}
             />
           </div>
         </div>
